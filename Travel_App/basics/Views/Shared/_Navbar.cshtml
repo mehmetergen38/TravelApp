@@ -1,0 +1,35 @@
+    <nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+     <a class="navbar-brand text-black" asp-controller="Home" asp-action="Index">
+          <img src="~/img/9.png" alt="" width="125" height="84" class="d-inline-block align-text-center">
+      TravelApp
+    </a>
+    <button class="navbar-toggler text-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-black" aria-current="page"asp-controller="Home" asp-action="Index">Anasayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" asp-controller="Travel" asp-action="Seyahat">Seyahat planla</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Kategori
+          </a>
+          <ul class="dropdown-menu text-black">
+            <li><a class="dropdown-item " href="/">Avrupa</a></li>
+            <li><a class="dropdown-item" href="/">Amerika</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/">Asya</a></li>
+          </ul>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Arama yap" aria-label="Search">
+        <button class="btn btn-outline-black text-black" type="submit">ARA</button>
+      </form>
+    </div>
+  </div>
+</nav>

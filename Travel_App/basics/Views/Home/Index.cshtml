@@ -1,0 +1,29 @@
+﻿@model List<Seyahat>
+
+@section Header{
+    @await Html.PartialAsync("_Header")
+}
+<div class="row">
+    <p class="bg-warning text-black">EN ÇOK ZİYARET EDİLEN SEYAHATLAR</p>
+    @foreach( var işlem in Model){
+        @if(işlem.isActive && işlem.isHome){
+        <div class="col-3">
+        <div class="card ">
+            <img src="~/img/@işlem.Image" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">
+                    @işlem.Tittle
+                </h5>
+                <p class="card-text">
+                    @işlem.Bilgi
+                    <a class="mt-1 mb-9 btn btn-warning" asp-controller="Travel"
+                    asp-action="Details"
+                    asp-route-id="@işlem.Id">Detaylar için tıkla</a>
+                </p>
+            </div>
+        </div>
+        </div>
+        }
+    }
+
+</div>

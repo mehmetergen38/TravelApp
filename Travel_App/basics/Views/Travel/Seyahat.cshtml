@@ -1,0 +1,11 @@
+@model List<Seyahat>
+
+<div class="container mt-3">
+             @foreach(var işlem in Model){
+               @if(işlem.isActive){
+                @await Html.PartialAsync("_Seyahat",işlem)
+               }
+               
+    }
+    
+    </div>

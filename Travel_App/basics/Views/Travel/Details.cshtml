@@ -1,0 +1,28 @@
+@model Seyahat
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src= "~/img/@Model.Image" alt="">
+                    </div>
+                <div class="col-md-2">
+                    <div class="card-body">
+                        <a  asp-controller="Travel" asp-action="Details" asp-route-id="@Model.Id">
+                        <h2 class="card-title">@Model.Tittle</h2>
+                        </a>
+                        <p class="card-text">@Model.Bilgi</p>
+                        <p class="card -text">@Model.Fiyat</p>
+                        <div>
+                            @if(Model.Tags != null){
+                            @foreach(var tag in Model.Tags){
+
+                            <span class="badge bg-warning text-black">@tag </span>
+                            }
+                            }
+                        </div>
+
+                        <button class=" mt-2 col-md-6 btn btn-outline-warning bg-warning text-black" type="submit">ŞİMDİ ÖDE</button>
+                    
+                    </div>
+                </div>
+                </div>
+        

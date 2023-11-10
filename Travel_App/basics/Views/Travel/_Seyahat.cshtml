@@ -1,0 +1,20 @@
+ @model Seyahat
+ 
+ <div class="card mb-5" id="">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src= "~/img/@Model.Image" alt="">
+                    </div>
+                <div class="col-md-2">
+                    <div class="card-body">
+                        <a  asp-controller="Travel" asp-action="Details" asp-route-id="@Model.Id">
+                        <h2 class="card-title">@Model.Tittle</h2>
+                        </a>
+                        <p class="card-text">@Model.Bilgi</p>
+                        <p class="card -text">@Model.Fiyat</p>
+                        <a class="mt-1 mb-9 btn btn-warning text-black" asp-controller="Travel"
+                    asp-action="Details" asp-route-id="@Model.Id">Seç</a>
+                    </div>
+                </div>
+                </div>
+            </div>
